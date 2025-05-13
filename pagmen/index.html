@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Menú Delicioso</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@400;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #1a237e; /* Azul Oscuro (Elegante) */
+            color: white;
+            padding: 2.5em 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            background-image: url('mariscos_fondo.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        header h1 {
+            margin-bottom: 0.5em;
+            font-size: 3em;
+            font-family: 'Montserrat', sans-serif; /* Fuente Montserrat para el encabezado */
+            letter-spacing: 0.1em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        header p {
+            font-size: 1.2em;
+            font-weight: 400;
+            color: #e0e0e0;
+            margin-bottom: 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .menu-container {
+            padding: 2em;
+            flex-grow: 1;
+        }
+
+        .menu-section {
+            margin-bottom: 2.5em;
+        }
+
+        .menu-section h2 {
+            color: #1a237e; /* Azul Oscuro */
+            margin-bottom: 1.2em;
+            font-size: 2.5em;
+            font-family: 'Lora', serif; /* Fuente Lora para los títulos de sección */
+            text-align: center;
+            border-bottom: 2px solid #3f51b5; /* Azul Medio */
+            padding-bottom: 0.7em;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2.5em;
+        }
+
+        .menu-item {
+            background-color: #f8f8f8;
+            padding: 2em;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-left: 4px solid #42a5f5; /* Azul Claro */
+        }
+
+        .menu-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-item h3 {
+            color: #1a237e; /* Azul Oscuro */
+            margin-bottom: 0.8em;
+            font-size: 1.8em;
+            font-family: 'Montserrat', sans-serif; /* Fuente Montserrat para los títulos de plato */
+        }
+
+        .menu-item p {
+            color: #555;
+            margin-bottom: 1.2em;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .menu-item .price {
+            color: #ff7043; /* Naranja Acenkto */
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-top: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2em 0;
+            background-color: #1a237e;
+            color: white;
+            margin-top: 3em;
+            border-top: 1px solid #283593;
+        }
+
+        @media (max-width: 768px) {
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+            .menu-item {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nuestro Delicioso Menú</h1>
+        <p>Explora nuestra selección de platillos y bebidas, cuidadosamente elaborados para ti.</p>
+    </header>
+
+    <main class="menu-container">
+        <section class="menu-section">
+            <h2>Entrantes</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h3>Coctel de Camarón</h3>
+                    <p>Mediano $100 / Grande $185</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Coctel de Pulpo, Calamar, Ostión o Surimi</h3>
+                    <p>Mediano $85 / Grande $120</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Tostadas de Camarón, Pulpo, Surimi o Calamar</h3>
+                    <p>$85</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Vuelve a la Vida (Marinero o Normal)</h3>
+                    <p>Chico $120 / Grande $200</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Empanadas de Camarón</h3>
+                    <p>$75</p>
+                </div>
+                 <div class="menu-item">
+                    <h3>Quesadillas (Pescado, Camaron, Pulpo)</h3>
+                    <p>$25</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <h2>Platos Principales</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h3>Mojarras</h3>
+                    <p>Frita, mojo de ajo, enchipotlada, a la diabla (Con ensalada y arroz)</p>
+                    <p class="price">Precio según tamaño</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Camarones (6 a 8 piezas)</h3>
+                    <p>Mantequilla, mojo de ajo, enchipotlados, a la diabla (Con ensalada y arroz)</p>
+                    <p class="price">$195</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Arrachera, Pechuga Empanizada o Asada</h3>
+                    <p>Con ensalada y arroz</p>
+                    <p class="price">$175</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <h2>Especialidades de la Casa</h2>
+            <div class="menu-grid">
+                 <div class="menu-item">
+                    <h3>Salmón a la Mantequilla</h3>
+                    <p>Todo acompañado con ensalada y arroz</p>
+                    <p class="price">$295</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Filete Empanizado</h3>
+                     <p>Todo acompañado con ensalada y arroz</p>
+                    <p class="price">$195</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Camarones Momia</h3>
+                     <p>Todo acompañado con ensalada y arroz</p>
+                    <p class="price">$220</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Camarones Empanizados</h3>
+                     <p>Todo acompañado con ensalada y arroz</p>
+                    <p class="price">$220</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Camarones Hawaianos</h3>
+                     <p>Todo acompañado con ensalada y arroz</p>
+                    <p class="price">$220</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Conchas</h3>
+                    <p>$20 pza</p>
+                </div>
+                 <div class="menu-item">
+                    <h3>Ostiones</h3>
+                </div>
+                 <div class="menu-item">
+                    <h3>Pata de Mula</h3>
+                </div>
+            </div>
+        </section>
+
+         <section class="menu-section">
+            <h2>Snacks</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h3>Alitas</h3>
+                    <p>BBQ, Búfalo, Mango habanero, lemon papper</p>
+                    <p class="price">$110</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Nuggets de Pollo</h3>
+                    <p>$65</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Papas a la Francesa</h3>
+                    <p>$65</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <h2>Postres</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h3>Fresas con Crema</h3>
+                    <p>Fresas selectas, jugosas y llenas de sabor, realzadas por la suavidad envolvente de la crema</p>
+                    <p class="price">$55</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Duraznos con Crema</h3>
+                    <p>Rebanadas de duraznos en almíbar, acariciadas por una crema ligera y delicada</p>
+                    <p class="price">$55</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <h2>Bebidas</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h3>Cervezas (335 ml)</h3>
+                    <p>Pacífico $35 / Corona $35 / Victoria $35</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Preparadas</h3>
+                    <p>Michelada (Con tu cerveza preferida) $40 / Clamato preparado (Con camarones opcional) $60 / Piña colada $85</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Vaso</h3>
+                    <p>Escarchado $10 / Con clamato $35</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Sin Alcohol</h3>
+                    <p>Coca-Cola, Fanta, Mundet, Fresca $25 / Jarra de Agua de 2L (Sabor del día) $75</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Nuestro Restaurante Delicioso. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
